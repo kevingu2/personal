@@ -1,0 +1,23 @@
+<!--portfolio-->
+<div id="portfolio" class="portfolio">
+    <div class="container">
+      <h3>My Portfolio</h3>
+      <label class="line"></label>
+      <div class="sap_tabs">      
+        <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+          <ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
+            <li class="resp-tab-item"><span>All</span></li>       
+          </ul> 
+          <div class="clearfix"> </div> 
+          <div class="resp-tabs-container">
+            <div class="tab-1 resp-tab-content">
+              {{#each model as |project|}}
+              	{{my-project project=project}}
+              {{/each}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--//portfolio-->
