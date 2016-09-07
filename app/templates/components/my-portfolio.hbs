@@ -11,10 +11,15 @@
           <div class="clearfix"> </div> 
           <div class="resp-tabs-container">
             <div class="tab-1 resp-tab-content">
-              {{#each model as |project|}}
-              	{{my-project project=project}}
-              {{/each}}
-            </div>
+				<div class="tab_img">		
+      				{{#each model as |project index|}}
+
+              				<div class="col-md-4 portfolio-grids grid grid-mdl">
+	              				{{my-project project=project}}
+              				</div>
+              		{{/each}}
+			</div>
+          </div>
           </div>
         </div>
       </div>

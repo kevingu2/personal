@@ -14,6 +14,11 @@ let projects = [{
   image:"assets/images/g3.jpg",
   link: "assets/images/g3.jpg",
   title: "Ducimus vero"
+},{
+  id:3,
+  image:"assets/images/g3.jpg",
+  link: "assets/images/g3.jpg",
+  title: "Ducimus vero"
 }];
 export default Ember.Route.extend({
   model(){

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
   didInsertElement() {
     console.log('Insert my Portfolio');
     this._super(...arguments);
@@ -10,5 +11,5 @@ export default Ember.Component.extend({
       fit: true   // 100% fit in a container
 
     });
-  }
+  },
 });
