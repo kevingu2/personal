@@ -1,9 +1,9 @@
 <!--about-->
 <div class="about">
   <div class="container">
-    <h3>About Me</h3>
+    <h3>Kevin Gu</h3>
     <label class="line"></label>
-    <img src="assets/images/1.jpg" alt=" " />
+    <img src="assets/images/me.jpg" alt=" " />
     <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
     <p>As opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for lorem ipsum.</p>
   </div>
@@ -14,12 +14,14 @@
 <!-- download-->
 <div class="download">
   <h3>Download my resume here</h3>
-  <a href="#">Download</a>
+  <a href="assets/pdfs/KevinGuResume.pdf">Download</a>
 </div>
 <!-- //download -->
 
         
-{{my-portfolio model=model}}
+{{my-portfolio all_projects=model.all_projects 
+               ios_projects=model.ios_projects
+               web_projects=model.web_projects}}
 
 
 <!--footer-->
