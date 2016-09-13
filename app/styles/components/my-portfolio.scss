@@ -1,0 +1,25 @@
+.tab_img{
+	padding:3em 0 0;
+	display: inline-block;
+}
+.portfolio-grids a {
+    display: block;
+}
+.portfolio-grids img.img-responsive {
+    width: 100%;
+}
+.portfolio-grids.grid.grid-mdl {
+    margin: 2em 0;
+}
+.grid .figcaption::before,
+.grid .figcaption::after {
+	pointer-events: none;
+}
+.grid .figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}

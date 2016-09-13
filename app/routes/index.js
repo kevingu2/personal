@@ -2,30 +2,41 @@ import Ember from 'ember';
 
 let ios_projects =[{
   id:1,
-  image:"assets/images/g1.jpg",
-  link: "assets/images/g1.jpg",
-  title: "At veroeos"
+  image:"assets/images/treds.jpg",
+  link: "https://itunes.apple.com/us/app/treds/id1066131472?mt=8",
+  title: "Treds"
 },{
   id:2,
-  image:"assets/images/g2.jpg",
-  link: "assets/images/g2.jpg",
-  title: "Ducimus vero"
+  image:"assets/images/border-wait.jpg",
+  link: "https://itunes.apple.com/us/app/best-time-to-cross-the-border/id570288644?mt=8",
+  title: "Border Wait Time"
+},{
+  id:3,
+  image:"assets/images/mother-to-baby.jpg",
+  link: "https://itunes.apple.com/us/app/mothertobaby/id1116292287?mt=8",
+  title: "Mother To Baby"
+},{
+  id:4,
+  image:"assets/images/cubic.jpg",
+  link: "assets/pdfs/CubicPoster.pdf",
+  title: "IBeacon"
 }];
 
 let web_projects = [{
   id:1,
-  image:"assets/images/g1.jpg",
-  link: "assets/images/g1.jpg",
-  title: "At veroeos"
+  image:"assets/images/annie-emerson.png",
+  link: "https://annie-emerson.herokuapp.com",
+  title: "Annie and Emerson"
 },{
   id:2,
-  image:"assets/images/g2.jpg",
-  link: "assets/images/g2.jpg",
-  title: "Ducimus vero"
+  image:"assets/images/emissary.png",
+  link: "http://webstormtroopers.herokuapp.com",
+  title: "Emissary"
 },{
   id:3,
-  image:"assets/images/g3.jpg",
+  image:"assets/images/SAIC.png",
   link: "assets/images/g3.jpg",
+  title: "Internal Manager"
 }];
 
 let all_projects = Ember.computed.union('ios_projects', 'web_projects');
