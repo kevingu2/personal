@@ -35,7 +35,7 @@ let web_projects = [{
 },{
   id:3,
   image:"assets/images/SAIC.png",
-  link: "assets/images/g3.jpg",
+  link: "http://saic-manager.herokuapp.com",
   title: "Internal Manager"
 }];
 
