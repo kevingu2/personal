@@ -33,7 +33,7 @@ input[type="button"], input[type="submit"] {
 	-o-transition: 0.5s all;
 	-ms-transition: 0.5s all;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -60,9 +60,7 @@ img {
 /*-- //Reset Code --*/
 
 /*-- banner --*/
-.b-part1{
-	text-align:center;
-}
+
 .b-part1 img{
 	width:43%;
 }
@@ -801,9 +799,6 @@ input[type="submit"]:hover{
 	}
 	.b-part1 h2 {
 		font-size: 17px;
-	}
-	.b-part2 h3, .b-part3 h3, .b-part4 h3 {
-		font-size: 25px;
 	}
 	.b-part3 .fa {
 		width: 23%;
