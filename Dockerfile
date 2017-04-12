@@ -1,4 +1,6 @@
 FROM nginx
+FROM node:4-onbuild
+EXPOSE 8888
 
 MAINTAINER "Kevin Gu" <kkevingu@gmail.com>
 
