@@ -1,6 +1,4 @@
-FROM nginx
-FROM node:4-onbuild
-EXPOSE 8888
+FROM armv7/armhf-ubuntu
 
 MAINTAINER "Kevin Gu" <kkevingu@gmail.com>
 
