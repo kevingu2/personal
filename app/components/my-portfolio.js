@@ -3,7 +3,6 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   didInsertElement() {
-    console.log('Insert my Portfolio');
     this._super(...arguments);
     this.$('#horizontalTab').easyResponsiveTabs({
       type: 'default', //Types: default, vertical, accordion           
