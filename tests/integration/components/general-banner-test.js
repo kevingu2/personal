@@ -16,6 +16,7 @@ test('it renders', function(assert) {
   // Template block usage:
   this.render(hbs`
     {{#general-banner}}
+      template block text
     {{/general-banner}}
   `);
 

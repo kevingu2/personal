@@ -1,0 +1,38 @@
+ember build
+
+mkdir -p /tmp/personal
+
+zip -r /tmp/personal/dist.zip /Users/kevingu/PersonalProjects/Ember/kevin/dist
+
+ssh -t pi@192.168.1.67 'sudo mkdir -p /tmp/build/personal'
+
+ssh -t pi@192.168.1.67 'sudo chown pi /tmp/build/personal'
+
+scp /tmp/personal/dist.zip pi@192.168.1.67:/tmp/build/personal
+
+ssh -t pi@192.168.1.67 'unzip /tmp/build/personal/dist.zip'
+
+old_id = ssh -t pi@192.168.1.67 'sudo docker ps -aqf "name=jolly_wing"'
+
+new_id =ssh -t pi@192.168.1.67 'docker run -d -p 80:80/tcp -p 443:443/tcp -v /home/pi/nginx_configs/nginx.conf:/etc/nginx/conf.d/default.conf forumi0721alpinearmhf/alpine-armhf-nginx:latest'
+
+ssh -t pi@192.168.1.67 'sudo docker exec dc4161d95a53313201f70ec94b36110c4bb2d82bb50c5a351dd7ffffd01c685d mkdir -p /data/www/'
+
+ssh -t pi@192.168.1.67 'docker cp /tmp/build/personal/dist dc4161d95a53313201f70ec94b36110c4bb2d82bb50c5a351dd7ffffd01c685d:/data/www'
+
+# Commands
+docker service rm my-web
+sudo netstat -plnt
+
+# Login to jenkins
+sudo -i -u jenkins
+
+# for mounting nfs
+sudo chown 777 /home/pi/build
+sudo vi /etc/exports 
+sudo exportfs -a
+sudo service rpcbind start
+sudo service nfs-kernel-server restart
+sudo mount 192.168.1.67:/home/pi/build /home/pi/build
+
+docker service create --name my-web --publish 80:80 --replicas 3 --mount type=bind,source=/home/pi/build,destination=/data/www kevingu2/arm-node
