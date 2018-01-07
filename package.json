@@ -15,7 +15,8 @@
   "repository": "",
   "engines": {
     "node": "6.12.3",
-    "npm": "3.10.10"
+    "npm": "3.10.10",
+    "ember-cli": "2.7.0"
   },
   "author": "",
   "license": "MIT",
