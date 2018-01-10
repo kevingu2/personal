@@ -15,19 +15,9 @@ let ios_projects =[{
   image:"assets/images/mother-to-baby-min.jpg",
   link: "https://itunes.apple.com/us/app/mothertobaby/id1116292287?mt=8",
   title: "Mother To Baby"
-},{
-  id:4,
-  image:"assets/images/cubic-min.jpg",
-  link: "assets/pdfs/CubicPoster.pdf",
-  title: "IBeacon"
 }];
 
 let web_projects = [{
-  id:1,
-  image:"assets/images/annie-emerson-min.png",
-  link: "https://annie-emerson.herokuapp.com",
-  title: "Annie and Emerson"
-},{
   id:2,
   image:"assets/images/emissary-min.png",
   link: "http://webstormtroopers.herokuapp.com",
@@ -37,9 +27,33 @@ let web_projects = [{
   image:"assets/images/SAIC-min.png",
   link: "http://saic-manager.herokuapp.com",
   title: "Internal Manager"
+},{
+  id:1,
+  image:"assets/images/annie-emerson-min.png",
+  link: "https://annie-emerson.herokuapp.com",
+  title: "Wedding"
 }];
 
 let all_projects = Ember.computed.union('ios_projects', 'web_projects');
+let latest_project = {
+  link: "https://xd.adobe.com/view/f7ef8463-f4d3-4b41-9533-4149bc4cbf16/",
+  summary: "An app that helps build community",
+  title: "Community iOS App",
+  image: "assets/images/community.jpg",
+  details: "This app helps users to setup meetups with people in their community, \
+    so that they can get to know individuals in their community in a deeper level. I \
+    am looking for developers and designers to help on this project",
+  project_link: "https://github.com/kevingu2/ComunityIOS"
+}
+let about_me_text = "I love working with customers through the process in delivering a \
+  quality product. With my team, we go over the requirements and iron out the core features. \
+  We mockup the application and go over with our customers the direction of the application. \
+  Finally, we begin developing the application with a clear idea of our customer's application. \
+  I have experience working with Web and iOS applications. I am looking for someone who can mentor \
+  me in my young software engineer career";
+let linkedin_url = "https://www.linkedin.com/in/kevin-gu-7bb52b66";
+let github_url = "https://github.com/kevingu2";
+
 export default Ember.Route.extend({
   classNameBindings: ['index'],
 
@@ -56,6 +70,10 @@ export default Ember.Route.extend({
     Ember.set(controller, 'all_projects', model.all_projects);
     Ember.set(controller, 'ios_projects', model.ios_projects);
     Ember.set(controller, 'web_projects', model.web_projects);
+    Ember.set(controller, 'latest_project', latest_project);
+    Ember.set(controller, 'about_me_text', about_me_text);
+    Ember.set(controller, 'linkedin_url', linkedin_url);
+    Ember.set(controller, 'github_url', github_url);
   }
 
 });
