@@ -1,0 +1,8 @@
+<div class="item">
+  <h3 class="title">{{work_experience.title}} - <span class="place"><a href="#">{{work_experience.company}}</a></span> <span class="year">({{work_experience.duration}})</span></h3>
+  <ul>
+  {{#each work_experience.tasks as |task index|}}
+    <li>{{task}}</li>
+  {{/each}}
+  </ul>
+</div>
