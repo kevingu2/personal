@@ -19,7 +19,7 @@ let skills = [{
   percent_mastery: "70%",
   level: "Experienced"
 },{
-  language: "Javascript: Nodejs/Emberjs",
+  language: "Javascript Node.JS/Ember.JS",
   percent_mastery: "70%",
   level: "Experienced"
 },{

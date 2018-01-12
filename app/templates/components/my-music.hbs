@@ -1,1 +1,6 @@
-<li><i class="fa fa-headphones"></i> <a href={{music.link}}>{{concat music.artist " - " music.title }}</a></li>
+{{yield}}
+<li><i class="fa fa-headphones"></i>
+  {{#if music}}
+    <a href={{music.link}}>{{concat music.artist " - " music.title }}</a>
+  {{/if}}
+</li>

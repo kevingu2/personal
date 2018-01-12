@@ -1,4 +1,8 @@
-{{#each all_projects as |project index|}}
-    {{my-project project=project}}
-{{/each}}
+{{yield}}
+{{#if all_projects}}
+  {{#each all_projects as |project index|}}
+      {{my-project project=project}}
+  {{/each}}
+{{/if}}
+
 
