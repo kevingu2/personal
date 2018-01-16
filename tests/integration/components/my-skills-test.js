@@ -46,13 +46,3 @@ test('it renders skills', function(assert) {
   let levelBarElem = levelBarElems[0];
   assert.ok(levelBarElem.outerHTML.indexOf(skill.percent_mastery) !== -1);
 });
-
-/*
-<div class="item">
-  <h3 class="level-title">{{skill.language}}<span class="level-label">{{skill.level}}</span></h3>
-  <div class="level-bar">
-    <div class="level-bar-inner" data-level={{skill.percent_mastery}}>
-    </div>
-  </div>
-</div>
- */
