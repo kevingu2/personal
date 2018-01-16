@@ -9,12 +9,15 @@ module.exports = function(defaults) {
 
   //CSS
   app.import('vendor/css/style.css');
-  app.import('vendor/css/swipebox.css');
+  app.import('vendor/css/font-awesome.css');
+  app.import('vendor/css/github-calendar.css');
+  app.import('vendor/css/bootstrap-theme.css');
+  app.import('vendor/css/github-activity.css');
 
   //JS
-  app.import('vendor/javascript/bars.js');
-  app.import('vendor/javascript/easyResponsiveTabs.js');
-  app.import('vendor/javascript/jquery.swipebox.min.js');
+  app.import('vendor/javascript/main.js');
+  app.import('vendor/javascript/bootstrap.js');
+  app.import('vendor/javascript/jquery.rss.min.js');
 
   return app.toTree();
 };

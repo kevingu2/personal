@@ -1,31 +1,167 @@
-<!--about-->
-<div class="about">
+<head>
+  <title>Responsive Portfolio Template for Developers</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+
+</head>
+
+<body>
+<!-- ******HEADER****** -->
+<header class="header">
   <div class="container">
-    <h3>Kevin Gu</h3>
-    <label class="line"></label>
-    <img src="assets/images/me-min.jpg" alt=" " />
-    <p>
-      I love working with customers through the process in delivering a quality product.
-      With my team, we go over the requirements and iron out the core
-      features. We mockup the application and go over with our customers the
-      direction of the application. Finally, we begin developing the application
-      with a clear idea of our customer's application. I have experience working with Web
-      and iOS applications.
-    </p>
-    <p>I am looking for someone who can mentor me in my young software engineer career</p>
-  </div>
-</div>
-<!--//about-->
+    <div class="profile">
+      <img class="profile  profile-image img-responsive pull-left" src="assets/images/me-min.jpg" alt="Kevin Gu" />
+    </div>
+    <div class="profile-content pull-left">
+      <h1 class="name">Kevin Gu</h1>
+      <h2 class="desc">Software Engineer</h2>
+      <ul class="social list-inline">
+        <li><a href={{linkedin_url}}><i class="fa fa-linkedin"></i></a></li>
+        <li class="last-item"><a href={{github_url}}><i class="fa fa-github-alt"></i></a></li>
+      </ul>
+    </div><!--//profile-->
+    <a class="btn btn-cta-primary pull-right" href="mailto:kevingu2@yahoo.com" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
+  </div><!--//container-->
+</header><!--//header-->
 
+<div class="container sections-wrapper">
+  <div class="row">
+    <div class="primary col-md-8 col-sm-12 col-xs-12">
+      <section class="about section">
+        <div class="section-inner">
+          <h2 class="heading">About Me</h2>
+          <div class="content">
+            <p>{{about_me_text}}</p>
 
-<!-- download-->
-<div class="download">
-  <h3>View my resume here</h3>
-  <a href="assets/pdfs/KevinGuResume.pdf">View</a>
-</div>
-<!-- //download -->
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </section><!--//section-->
 
+      <section class="latest section">
+        <div class="section-inner">
+          <h2 class="heading">Latest Projects</h2>
+          <div class="content">
 
-{{my-portfolio all_projects=model.all_projects
-               ios_projects=model.ios_projects
-               web_projects=model.web_projects}}
+            <div class="item featured text-center">
+              <h3 class="title"><a href={{latest_project.link}} target="_blank">{{latest_project.title}}</a></h3>
+              <p class="summary">{{latest_project.summary}}</p>
+              <div class="featured-image">
+                <a href={{latest_project.link}} target="_blank">
+                  <img  class="img-responsive" src={{latest_project.image}} alt="project name" />
+                </a>
+                <div class="ribbon">
+                  <div class="text">New</div>
+                </div>
+              </div>
+
+              <div class="desc text-left">
+                <p>{{latest_project.details}}</p>
+              </div><!--//desc-->
+              <a class="btn btn-cta-secondary" href={{latest_project.project_link}} target="_blank"><i class="fa fa-thumbs-o-up"></i> Back my project</a>
+            </div><!--//item-->
+
+            <hr class="divider" />
+            {{my-portfolio all_projects=model.all_projects}}
+
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </section><!--//section-->
+
+      <section class="experience section">
+        <div class="section-inner">
+          <h2 class="heading">Work Experience</h2>
+          <div class="content">
+            {{#each work_experiences as |work_experience index|}}
+              {{work-experience work_experience=work_experience}}
+            {{/each}}
+
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </section><!--//section-->
+    </div><!--//primary-->
+    <div class="secondary col-md-4 col-sm-12 col-xs-12">
+      <aside class="info aside section">
+        <div class="section-inner">
+          <h2 class="heading sr-only">Basic Information</h2>
+          <div class="content">
+            <ul class="list-unstyled">
+              <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Sunnyvale, US</li>
+              <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:kevingu2@yahoo.com">kevingu2@yahoo.com</a></li>
+            </ul>
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </aside><!--//aside-->
+
+      <aside class="skills aside section">
+        <div class="section-inner">
+          <h2 class="heading">Skills</h2>
+          <div class="content">
+
+            <div class="skillset">
+
+              {{#each skills as |skill index|}}
+                {{my-skills skill=skill}}
+              {{/each}}
+            </div>
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </aside><!--//section-->
+
+      <aside class="education aside section">
+        <div class="section-inner">
+          <h2 class="heading">Education</h2>
+          <div class="content">
+            <div class="item">
+              <h3 class="title"><i class="fa fa-graduation-cap"></i> Computer Science</h3>
+              <h4 class="university">University of San Diego <span class="year">(2012-2016)</span></h4>
+            </div><!--//item-->
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </aside><!--//section-->
+
+      <aside class="languages aside section">
+        <div class="section-inner">
+          <h2 class="heading">Languages</h2>
+          <div class="content">
+            <ul class="list-unstyled">
+              <li class="item">
+                <span class="title"><strong>English:</strong></span>
+                <span class="level">Native Speaker <br class="visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </span>
+              </li><!--//item-->
+              <li class="item">
+                <span class="title"><strong>Mandarin:</strong></span>
+                <span class="level">Proficient speaker <br class="visible-sm visible-xs"/><i class="fa fa-star"></i> <i class="fa fa-star"></i></span>
+              </li><!--//item-->
+            </ul>
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </aside><!--//section-->
+
+      <aside class="list music aside section">
+        <div class="section-inner">
+          <h2 class="heading">Favorite coding music</h2>
+          <div class="content">
+            <ul class="list-unstyled">
+              {{#each musics as |music index|}}
+                {{my-music music=music}}
+              {{/each}}
+            </ul>
+          </div><!--//content-->
+        </div><!--//section-inner-->
+      </aside><!--//section-->
+
+    </div><!--//secondary-->
+  </div><!--//row-->
+</div><!--//masonry-->
+
+<!-- ******FOOTER****** -->
+<footer class="footer">
+  <div class="container text-center">
+    <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
+    <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+  </div><!--//container-->
+</footer><!--//footer-->
+
+</body>
+
