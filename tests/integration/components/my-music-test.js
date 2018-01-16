@@ -38,6 +38,7 @@ test('it renders injected music', function(assert) {
   let musicElem = elems[0];
   let textElem = musicElem.textContent;
   assert.notEqual(textElem, '');
-  assert.equal(textElem, music.artist + ' - ' + music.title);
+  assert.ok(textElem.indexOf(music.artist) !== -1);
+  assert.ok(textElem.indexOf(music.title) !== -1);
   assert.equal(musicElem.href, music.link);
 });
