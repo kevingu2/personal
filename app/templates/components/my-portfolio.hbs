@@ -1,38 +1,8 @@
-<!--portfolio-->
-<div id="portfolio" class="portfolio">
-    <div class="container">
-      <h3>My Portfolio</h3>
-      <label class="line"></label>
-      <div class="sap_tabs">      
-        <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
-          <ul class="resp-tabs-list wow fadeInUp animated" data-wow-delay=".7s">
-            <li class="resp-tab-item"><span>Web</span></li>
-            <li class="resp-tab-item"><span>iOS</span></li>
-            <li class="resp-tab-item"></li>       
-          </ul> 
-          <div class="resp-tabs-container">
-           
-            <div class="tab-1 resp-tab-content">
-            <div class="tab_img">   
-              {{#each web_projects as |project index|}}
-                <div class="col-md-4 portfolio-grids grid grid-mdl">
-                 {{my-project project=project}}
-                </div>
-              {{/each}}
-            </div>
-            </div>
-            <div class="tab-1 resp-tab-content">
-            <div class="tab_img">   
-              {{#each ios_projects as |project index|}}
-                <div class="col-md-3 portfolio-grids grid grid-mdl">
-                 {{my-project project=project}}
-                </div>
-              {{/each}}
-            </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-<!--//portfolio-->
+{{yield}}
+{{#if all_projects}}
+  {{#each all_projects as |project index|}}
+      {{my-project project=project}}
+  {{/each}}
+{{/if}}
+
+
