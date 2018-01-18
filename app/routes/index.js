@@ -29,7 +29,7 @@ let skills = [{
 },{
   language: "Ruby on Rails",
   percent_mastery: "50%",
-  level: "Experienced"
+  level: "Proficient"
 }];
 
 let work_experiences = [{
